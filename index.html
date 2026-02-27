@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI.MeD — AI-Native Platforms for Life Sciences & Healthcare | HelixOS™ | Regulon™</title>
+  <meta name="description" content="AI.MeD builds AI-native platforms for life sciences and healthcare enterprises. HelixOS™ for multi-omics, Regulon™ for compliance, AI Molecule Foundry™ for drug discovery, SynaptMed™ for pharmacy operations.">
+  <meta name="keywords" content="AI healthcare, life sciences platforms, multi-omics, drug discovery AI, compliance automation, pharmacy operations">
+  <meta name="author" content="AI.MeD">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI.MeD — AI-Native Platforms for Life Sciences & Healthcare">
+  <meta property="og:description" content="We build AI-native platforms that turn complex data, compliance, and operations into products teams actually use.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo/Ai.MeD_2.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/logo/Ai.MeD_2.png">
+
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AI.MeD",
+    "description": "AI-native platforms for Life Sciences, Drug Discovery & Regulated Healthcare",
+    "url": "https://ai-med.co.in",
+    "foundingLocation": "Hyderabad, Telangana, India",
+    "knowsAbout": ["Multi-omics", "Regulatory Compliance", "Drug Discovery AI", "Pharmacy Operations"],
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <!-- Replace G-XXXXXXXXXX with your GA4 Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!--
+    GODADDY DEPLOYMENT STEPS (ai-med.co.in):
+    1. Log in to GoDaddy → My Products → Websites + Hosting → Manage
+    2. Go to cPanel → File Manager → public_html
+    3. Upload ALL files preserving folder structure
+    4. index.html must be in root of public_html
+    5. SSL: cPanel → SSL/TLS Status → Run AutoSSL (covers ai-med.co.in + www.ai-med.co.in)
+    6. Domain DNS: A Record for ai-med.co.in pointing to your GoDaddy hosting IP
+       CNAME Record for www.ai-med.co.in → ai-med.co.in
+    7. Email setup: GoDaddy Email & Office → create hello@ai-med.co.in
+    8. .htaccess handles: AutoSSL ACME challenge, HTTPS redirect, www→non-www, clean URLs
+    9. Formspree: Test by submitting the contact form and verifying email arrives
+    10. Analytics: Add your Google Analytics 4 ID in the gtag() snippet
+  -->
+</head>
+<body>
+
+<!-- Skip to main content -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ============================================================
+     NAVIGATION (Prompt 2)
+     ============================================================ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" aria-label="AI.MeD Home">
+      <img src="assets/logo/Ai.MeD_2.png" alt="AI.MeD Logo" width="36" height="36">
+      <span class="nav-logo-text">AI.MeD</span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+
+      <!-- Platforms dropdown -->
+      <div class="nav-dropdown">
+        <a href="platforms.html" class="nav-link nav-dropdown-toggle">
+          Platforms
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="platforms.html#helixos" class="nav-dropdown-item" role="menuitem">
+            <strong>HelixOS™</strong>
+            <span>AI-Native Multi-Omics Platform</span>
+          </a>
+          <a href="platforms.html#regulon" class="nav-dropdown-item" role="menuitem">
+            <strong>Regulon™</strong>
+            <span>AI Compliance Operating System</span>
+          </a>
+          <a href="platforms.html#molecule-foundry" class="nav-dropdown-item" role="menuitem">
+            <strong>AI Molecule Foundry™</strong>
+            <span>Drug Discovery Platform</span>
+          </a>
+          <a href="platforms.html#synaptmed" class="nav-dropdown-item" role="menuitem">
+            <strong>SynaptMed™</strong>
+            <span>Smart Pharmacy Operations</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services dropdown -->
+      <div class="nav-dropdown">
+        <a href="services.html" class="nav-link nav-dropdown-toggle">
+          Services
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="services.html#helixos-services" class="nav-dropdown-item" role="menuitem">
+            <strong>Research & Omics Services</strong>
+            <span>Multi-omics pipeline engineering & AI enablement</span>
+          </a>
+          <a href="services.html#regulon-services" class="nav-dropdown-item" role="menuitem">
+            <strong>Compliance & Audit Readiness</strong>
+            <span>Continuous compliance monitoring & automation</span>
+          </a>
+          <a href="services.html#infra-services" class="nav-dropdown-item" role="menuitem">
+            <strong>Infrastructure & Research IT</strong>
+            <span>HPC, GPU optimization & cloud-native IT</span>
+          </a>
+          <a href="services.html#synaptmed-services" class="nav-dropdown-item" role="menuitem">
+            <strong>Pharmacy Digital Transformation</strong>
+            <span>End-to-end pharmacy onboarding & operations</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+
+    <!-- CTA -->
+    <a href="contact.html" class="btn btn-primary nav-cta">See a Live Demo</a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <div class="mobile-menu-links">
+    <a href="index.html" class="mobile-menu-link">Home</a>
+
+    <button class="mobile-accordion-btn" aria-expanded="false">
+      Platforms
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+    <div class="mobile-accordion-panel">
+      <a href="platforms.html#helixos">HelixOS™ — AI-Native Multi-Omics Platform</a>
+      <a href="platforms.html#regulon">Regulon™ — AI Compliance Operating System</a>
+      <a href="platforms.html#molecule-foundry">AI Molecule Foundry™ — Drug Discovery Platform</a>
+      <a href="platforms.html#synaptmed">SynaptMed™ — Smart Pharmacy Operations</a>
+    </div>
+
+    <button class="mobile-accordion-btn" aria-expanded="false">
+      Services
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+    <div class="mobile-accordion-panel">
+      <a href="services.html#helixos-services">Research & Omics Services</a>
+      <a href="services.html#regulon-services">Compliance & Audit Readiness</a>
+      <a href="services.html#infra-services">Infrastructure & Research IT</a>
+      <a href="services.html#synaptmed-services">Pharmacy Digital Transformation</a>
+    </div>
+
+    <a href="about.html" class="mobile-menu-link">About</a>
+    <a href="contact.html" class="mobile-menu-link">Contact</a>
+  </div>
+  <div class="mobile-menu-cta">
+    <a href="contact.html" class="btn btn-primary btn-full btn-lg">See a Live Demo</a>
+  </div>
+</div>
+
+<!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+<main id="main">
+
+  <!-- ============================================================
+       SECTION: HERO (Prompt 3A)
+       ============================================================ -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-wave"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="hero-animate">
+          <span class="badge-teal">AI-Native Platforms for Life Sciences &amp; Healthcare</span>
+        </div>
+        <h1 class="hero-animate">Transforming Healthcare Through Intelligent Platforms</h1>
+        <p class="hero-subheadline hero-animate">We build AI-native platforms that turn complex data, compliance, and operations into products teams actually use — built to deploy fast, scale cleanly, and prove value early.</p>
+        <div class="hero-ctas hero-animate">
+          <a href="contact.html" class="btn btn-primary btn-lg pulse">See a Live Demo</a>
+          <a href="contact.html?type=poc" class="btn btn-outline-white btn-lg">Run a PoC on Your Data</a>
+        </div>
+        <!-- <div class="trust-strip hero-animate">
+          <span class="trust-strip-item">&#x20B9;30 Crore+ Active Pipeline</span>
+          <span class="trust-strip-dot"></span>
+          <span class="trust-strip-item">Peer-reviewed research in RSC Advances</span>
+          <span class="trust-strip-dot"></span>
+          <span class="trust-strip-item">300+ Years Combined Leadership</span>
+        </div> -->
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <!-- Replace with product screenshot or demo video thumbnail -->
+        <canvas id="heroCanvas"></canvas>
+      </div>
+    </div>
+    <div class="container">
+      <div class="platform-pills">
+        <a href="#platforms" class="platform-pill">HelixOS™</a>
+        <a href="#platforms" class="platform-pill">Regulon™</a>
+        <a href="#platforms" class="platform-pill">AI Molecule Foundry™</a>
+        <a href="#platforms" class="platform-pill">SynaptMed™</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: PLATFORM OVERVIEW CARDS (Prompt 3B)
+       ============================================================ -->
+  <section id="platforms" class="section-light section-padding platform-section" aria-label="Our Platforms">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Four AI-Powered Platforms. One Operating Vision.</h2>
+        <p class="text-muted">From multi-omics intelligence to continuous compliance readiness to smart pharmacy operations — our platforms are built to deploy fast and prove value early.</p>
+      </div>
+
+      <div class="platform-grid">
+        <!-- Card 1 — HelixOS -->
+        <div class="card-platform animate-on-scroll animate-delay-1">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+          </div>
+          <div class="platform-card-badges">
+            <span class="badge">Multi-Omics</span>
+            <span class="badge">Research AI</span>
+          </div>
+          <h3>HelixOS™</h3>
+          <p class="card-sub">The AI-Native Multi-Omics Operating Platform</p>
+          <p class="card-body">Transforms raw omics data into reproducible, production-ready biological intelligence — without stitching together dozens of brittle tools. Built for pharma, biotech, and life-sciences research teams at scale.</p>
+          <div class="platform-card-modules">
+            <span class="badge-teal">Data Core</span>
+            <span class="badge-teal">Pipelines</span>
+            <span class="badge-teal">AI Workbench</span>
+          </div>
+          <a href="platforms.html#helixos" class="platform-card-link">Explore HelixOS &rarr;</a>
+        </div>
+
+        <!-- Card 2 — Regulon -->
+        <div class="card-platform animate-on-scroll animate-delay-2">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <div class="platform-card-badges">
+            <span class="badge">Compliance</span>
+            <span class="badge">GxP</span>
+            <span class="badge">FDA</span>
+          </div>
+          <h3>Regulon™</h3>
+          <p class="card-sub">The AI-Native Compliance Operating System</p>
+          <p class="card-body">Replaces fragmented compliance workflows and last-minute audit firefighting with continuous, automated regulatory readiness — purpose-built for pharma, biotech, and healthcare enterprises.</p>
+          <div class="platform-card-modules">
+            <span class="badge-teal">Knowledge Graph</span>
+            <span class="badge-teal">Control-as-Code</span>
+            <span class="badge-teal">Readiness Score</span>
+          </div>
+          <a href="platforms.html#regulon" class="platform-card-link">Explore Regulon &rarr;</a>
+        </div>
+
+        <!-- Card 3 — AI Molecule Foundry -->
+        <div class="card-platform animate-on-scroll animate-delay-3">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="17" cy="8" r="1"></circle><circle cx="17" cy="16" r="1"></circle><circle cx="12" cy="19" r="1"></circle><circle cx="7" cy="16" r="1"></circle><circle cx="7" cy="8" r="1"></circle><line x1="12" y1="9" x2="12" y2="6"></line><line x1="14.5" y1="10.5" x2="16.5" y2="8.5"></line><line x1="14.5" y1="13.5" x2="16.5" y2="15.5"></line><line x1="12" y1="15" x2="12" y2="18"></line><line x1="9.5" y1="13.5" x2="7.5" y2="15.5"></line><line x1="9.5" y1="10.5" x2="7.5" y2="8.5"></line></svg>
+          </div>
+          <div class="platform-card-badges">
+            <span class="badge">Drug Discovery</span>
+            <span class="badge">Generative AI</span>
+          </div>
+          <h3>AI Molecule Foundry™</h3>
+          <p class="card-sub">Enterprise AI Drug Discovery Platform</p>
+          <p class="card-body">An enterprise generative AI platform for small-molecule and biologics design — combining ML-guided screening with closed-loop intelligence workflows validated through in silico and in vitro methods.</p>
+          <div class="platform-card-modules">
+            <span class="badge-teal">Generative Design</span>
+            <span class="badge-teal">ADMET Prediction</span>
+            <span class="badge-teal">Docking Simulation</span>
+          </div>
+          <a href="platforms.html#molecule-foundry" class="platform-card-link">Explore Molecule Foundry &rarr;</a>
+        </div>
+
+        <!-- Card 4 — SynaptMed -->
+        <div class="card-platform animate-on-scroll animate-delay-4">
+          <div class="icon-circle" style="background: var(--color-teal);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path><path d="M3 9V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4"></path><line x1="12" y1="13" x2="12" y2="17"></line><line x1="10" y1="15" x2="14" y2="15"></line></svg>
+          </div>
+          <div class="platform-card-badges">
+            <span class="badge">Pharmacy</span>
+            <span class="badge">Built for Bharat</span>
+          </div>
+          <h3>SynaptMed™</h3>
+          <p class="card-sub">Smart Pharmacy Operations, Built for the Real World</p>
+          <p class="card-body">An offline-first platform that helps pharmacies reduce expiry loss, speed up billing, and grow repeat business. Designed for single stores and chains. Works even when the internet doesn't.</p>
+          <div class="platform-card-modules">
+            <span class="badge-teal">Inventory Intelligence</span>
+            <span class="badge-teal">Fast POS</span>
+            <span class="badge-teal">Growth Tools</span>
+          </div>
+          <a href="platforms.html#synaptmed" class="platform-card-link">Explore SynaptMed &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: MARKET PROBLEM & OPPORTUNITY (Prompt 3C)
+       ============================================================ -->
+  <section class="section-white section-padding market-section" aria-label="Market Opportunity">
+    <div class="container">
+      <h2 class="text-violet animate-on-scroll" style="margin-bottom: 48px;">Life Sciences Enterprises Face Structural, Irreversible Pressures</h2>
+
+      <div class="two-col">
+        <div class="problem-list animate-on-scroll">
+          <div class="problem-item">
+            <div class="icon-circle icon-circle-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 15s2-2 4-2 4 4 8 4 6-6 6-6"></path><circle cx="12" cy="8" r="3"></circle></svg>
+            </div>
+            <p><strong>Explosion of genomic and multi-omics data</strong> — overwhelming existing infrastructure</p>
+          </div>
+          <div class="problem-item">
+            <div class="icon-circle icon-circle-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+            <p><strong>Increasing FDA and EMA inspection scrutiny</strong> — reactive compliance is failing</p>
+          </div>
+          <div class="problem-item">
+            <div class="icon-circle icon-circle-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <p><strong>Growth of biologics and complex modalities</strong> — requiring AI-native design workflows</p>
+          </div>
+          <div class="problem-item">
+            <div class="icon-circle icon-circle-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <p><strong>Need to compress drug discovery timelines</strong> — current cycles are too slow and costly</p>
+          </div>
+          <div class="problem-item">
+            <div class="icon-circle icon-circle-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+            </div>
+            <p><strong>Rising enterprise AI adoption mandates</strong> — without the infrastructure to support them</p>
+          </div>
+        </div>
+
+        <div class="struggle-box animate-on-scroll">
+          <h3>Enterprise Struggles Today</h3>
+          <ul>
+            <li>Fragmented data pipelines</li>
+            <li>Non-reproducible research workflows</li>
+            <li>Reactive compliance systems</li>
+            <li>Infrastructure not optimized for AI and GPU workloads</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="convergence-statement animate-on-scroll">
+        <h3>AI.MeD operates at the convergence of Infrastructure &times; Biology &times; AI — building the operating layer that unlocks predictive intelligence across Life Sciences enterprises.</h3>
+        <p>We are not a system-of-record replacement. We are not a drug-owning biotech. We are not a generic IT services provider. We are an AI-native intelligence and orchestration layer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: SERVICES OVERVIEW (Prompt 3D)
+       ============================================================ -->
+  <section class="section-light section-padding" aria-label="Services">
+    <div class="container">
+      <div class="section-header text-center animate-on-scroll" style="max-width: 700px; margin: 0 auto 56px;">
+        <h2>Platforms First. Services That Actually Ship Value.</h2>
+        <p class="text-muted">Every engagement is powered by one or more of our platforms — to move customers from chaos to control, fast.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Track 1 -->
+        <div class="service-track animate-on-scroll animate-delay-1">
+          <span class="badge">HelixOS™</span>
+          <h3>Omics, AI &amp; Research Enablement</h3>
+          <p class="track-desc">Multi-omics pipeline engineering, AI-ready data engineering, HPC &amp; cloud acceleration, and discovery-to-production enablement for pharma and biotech research teams.</p>
+          <span class="outcome-tag">&ldquo;Pipelines that survive beyond a single project&rdquo;</span>
+        </div>
+
+        <!-- Track 2 -->
+        <div class="service-track animate-on-scroll animate-delay-2">
+          <span class="badge">Regulon™</span>
+          <h3>Continuous Compliance &amp; Audit Readiness</h3>
+          <p class="track-desc">Compliance platform implementation across GxP, SOC 2, ISO 27001, HIPAA, and GDPR — with control-as-code automation and managed readiness monitoring.</p>
+          <span class="outcome-tag">&ldquo;Audits become predictable — and boring&rdquo;</span>
+        </div>
+
+        <!-- Track 3 -->
+        <div class="service-track animate-on-scroll animate-delay-3">
+          <span class="badge">AI Molecule Foundry™</span>
+          <h3>Infrastructure &amp; Research IT Services</h3>
+          <p class="track-desc">HPC lifecycle management, GPU cluster optimization, DevOps and MLOps in regulated environments, cloud-native research IT modernization, and bioinformatics custom development.</p>
+          <span class="outcome-tag">&ldquo;Infrastructure creates enterprise entry and recurring revenue&rdquo;</span>
+        </div>
+
+        <!-- Track 4 -->
+        <div class="service-track animate-on-scroll animate-delay-4">
+          <span class="badge" style="background: rgba(6,182,212,0.1); color: var(--color-teal-dark);">SynaptMed™</span>
+          <h3>Smart Pharmacy Digital Transformation</h3>
+          <p class="track-desc">End-to-end pharmacy onboarding, inventory and expiry optimization, billing and POS enablement, and customer growth and retention programs for single stores and chains.</p>
+          <span class="outcome-tag">&ldquo;Pharmacies go digital without disruption&rdquo;</span>
+        </div>
+      </div>
+
+      <!-- Engagement model -->
+      <div class="engagement-model animate-on-scroll">
+        <h3>Our Engagement Model — Platform-Led. Outcome-Driven.</h3>
+        <div class="engagement-steps">
+          <div class="engagement-step">
+            <span class="engagement-step-number">1</span>
+            <span class="engagement-step-label">Discovery &amp; Fit</span>
+          </div>
+          <span class="engagement-arrow">&rarr;</span>
+          <div class="engagement-step">
+            <span class="engagement-step-number">2</span>
+            <span class="engagement-step-label">PoC on Real Data</span>
+          </div>
+          <span class="engagement-arrow">&rarr;</span>
+          <div class="engagement-step">
+            <span class="engagement-step-number">3</span>
+            <span class="engagement-step-label">Production Rollout</span>
+          </div>
+          <span class="engagement-arrow">&rarr;</span>
+          <div class="engagement-step">
+            <span class="engagement-step-number">4</span>
+            <span class="engagement-step-label">Scale &amp; Optimize</span>
+          </div>
+        </div>
+        <div style="margin-top: 40px;">
+          <a href="contact.html" class="btn btn-primary btn-lg">Let's Build Something Real</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: LEADERSHIP PREVIEW (Prompt 3F)
+       ============================================================ -->
+  <section class="section-light section-padding" aria-label="Leadership">
+    <div class="container">
+      <div class="section-header text-center animate-on-scroll" style="max-width: 600px; margin: 0 auto 48px;">
+        <h2>300+ Years of Combined Leadership</h2>
+        <p class="text-muted">Healthcare &times; Life Sciences &times; AI Convergence</p>
+      </div>
+
+      <div class="leadership-grid">
+        <div class="leader-card animate-on-scroll animate-delay-1">
+          <div class="leader-avatar">JSR</div>
+          <h4>Jupudi Srinivasa Rao</h4>
+          <p class="leader-title">Co-Founder</p>
+          <p class="leader-focus">30+ Years | Enterprise GRC, Information Security &amp; Privacy</p>
+        </div>
+        <div class="leader-card animate-on-scroll animate-delay-2">
+          <div class="leader-avatar">UMR</div>
+          <h4>Dr. Uma Maheswara Rao Chanchala</h4>
+          <p class="leader-title">Co-Founder</p>
+          <p class="leader-focus">30+ Years | Life Sciences IT &amp; Digital Transformation | PhD Life Sciences</p>
+        </div>
+        <div class="leader-card animate-on-scroll animate-delay-3">
+          <div class="leader-avatar">SC</div>
+          <h4>Sodhinipalli Chanakya</h4>
+          <p class="leader-title">Co-Founder</p>
+          <p class="leader-focus">15+ Years | Enterprise IT, Cloud &amp; AI | Product Execution Leader</p>
+        </div>
+        <div class="leader-card animate-on-scroll animate-delay-4">
+          <div class="leader-avatar">MK</div>
+          <h4>Madhusudhan Koppoju</h4>
+          <p class="leader-title">Co-Founder</p>
+          <p class="leader-focus">15+ Years | Entrepreneurship &amp; Fund Management</p>
+        </div>
+      </div>
+
+      <div class="advisor-strip animate-on-scroll">
+        <p><strong>Advised by:</strong> Dr. Pawan K Dhar &middot; Dr. Polamarasetty Aparoy &middot; Dr. Satish Gupta &middot; Dr. Nageswara Rao Reddy Neelapu &middot; Dr. Ravi Chandra Pavan Kumar &middot; Venkatesh Muniyandi</p>
+      </div>
+
+      <div class="text-center" style="margin-top: 32px;">
+        <a href="about.html" class="btn btn-outline">Meet the Full Team &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: BOTTOM CTA / PIPELINE (Prompt 3G)
+       ============================================================ -->
+  <section class="bottom-cta section-padding" aria-label="Call to Action">
+    <div class="container">
+      <div class="bottom-cta-grid">
+        <div>
+          <span class="badge-teal" style="margin-bottom: 20px;">Early Commercial Traction</span>
+          <h2 style="color: var(--color-white); margin-bottom: 16px;">&#x20B9;30 Crore+ in Active Pipeline Opportunities</h2>
+          <p style="color: rgba(255,255,255,0.7); font-size: 17px; line-height: 1.7; margin-bottom: 24px;">AI.MeD has secured and advanced pipeline engagements across pharma infrastructure, genomics AI programs, and platform deployments — with a Year 1 foundation already generating committed revenue.</p>
+
+          <div class="pipeline-highlights">
+            <div class="pipeline-highlight">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Two enterprise projects with committed revenue delivering within 12 months</span>
+            </div>
+            <div class="pipeline-highlight">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Pharma infrastructure engagement — 30–50 FTE scale</span>
+            </div>
+            <div class="pipeline-highlight">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Advanced genomics AI program — IP and scientific credibility</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-cards">
+          <div class="cta-card">
+            <h4>See a Live Demo</h4>
+            <p>Watch our platforms in action on real data.</p>
+            <a href="contact.html?type=demo" class="btn btn-primary btn-full">Request Demo &rarr;</a>
+          </div>
+          <div class="cta-card">
+            <h4>Run a PoC on Your Data</h4>
+            <p>We'll deploy a proof-of-concept in your environment.</p>
+            <a href="contact.html?type=poc" class="btn btn-teal btn-full">Start a PoC &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-strip">
+        <p>Ready to transform your operations? Let's build something real.</p>
+        <a href="contact.html" class="btn btn-outline-white">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER (Prompt 2)
+     ============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Column 1 — Company -->
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom: 12px;">
+          <img src="assets/logo/Ai.MeD_1.png" alt="AI.MeD Logo" width="32" height="32">
+          <span class="nav-logo-text" style="color: var(--color-white);">AI.MeD</span>
+        </a>
+        <p>Transforming Healthcare Through Intelligent Platforms</p>
+        <p style="font-size: 13px; margin-top: 8px;">AI-Native Platforms for Life Sciences &amp; Healthcare</p>
+      </div>
+
+      <!-- Column 2 — Platforms -->
+      <div class="footer-col">
+        <h4>Platforms</h4>
+        <a href="platforms.html#helixos">HelixOS™</a>
+        <a href="platforms.html#regulon">Regulon™</a>
+        <a href="platforms.html#molecule-foundry">AI Molecule Foundry™</a>
+        <a href="platforms.html#synaptmed">SynaptMed™</a>
+      </div>
+
+      <!-- Column 3 — Services -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html#helixos-services">Omics &amp; Research Enablement</a>
+        <a href="services.html#regulon-services">Compliance &amp; Audit Readiness</a>
+        <a href="services.html#infra-services">Infrastructure &amp; Research IT</a>
+        <a href="services.html#synaptmed-services">Pharmacy Operations</a>
+      </div>
+
+      <!-- Column 4 — Connect -->
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">Careers</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="mailto:hello@ai-med.co.in">hello@ai-med.co.in</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 AI.MeD. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
+      <p>Transforming Healthcare &times; Life Sciences &times; AI</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script defer src="js/main.js"></script>
+
+</body>
+</html>

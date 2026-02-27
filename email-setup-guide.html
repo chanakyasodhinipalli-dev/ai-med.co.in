@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI.MeD — Email Trigger & Notification Setup Guide (Internal)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-navy: #1A2456;
+      --color-violet: #7C3AED;
+      --color-violet-pale: #F5F3FF;
+      --color-teal: #06B6D4;
+      --color-text-body: #374151;
+      --color-text-muted: #6B7280;
+      --color-silver-light: #E5E7EB;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--color-text-body);
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      background: #FAFAFA;
+    }
+    h1 { font-size: 32px; color: var(--color-navy); margin-bottom: 8px; }
+    h2 { font-size: 24px; color: var(--color-violet); margin: 40px 0 16px; border-bottom: 2px solid var(--color-violet-pale); padding-bottom: 8px; }
+    h3 { font-size: 18px; color: var(--color-navy); margin: 24px 0 12px; }
+    p { margin-bottom: 12px; }
+    .subtitle { color: var(--color-text-muted); font-size: 14px; margin-bottom: 32px; }
+    .badge { display: inline-block; padding: 4px 12px; background: var(--color-violet); color: white; border-radius: 4px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .badge-teal { background: var(--color-teal); }
+    .badge-gray { background: var(--color-silver-light); color: var(--color-text-body); }
+    .card { background: white; border: 1px solid var(--color-silver-light); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+    .card-highlight { border-left: 4px solid var(--color-violet); }
+    .card-teal { border-left: 4px solid var(--color-teal); }
+    ol, ul { padding-left: 24px; margin-bottom: 16px; }
+    li { padding: 4px 0; }
+    code { font-family: 'JetBrains Mono', monospace; background: #F3F4F6; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+    pre { background: #1E293B; color: #E2E8F0; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 16px 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.5; }
+    .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--color-violet); color: white; border-radius: 50%; font-size: 14px; font-weight: 700; margin-right: 8px; flex-shrink: 0; }
+    .cost { background: var(--color-violet-pale); padding: 12px 16px; border-radius: 8px; font-size: 14px; margin: 12px 0; }
+    .recommended { background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 8px; padding: 16px; margin: 24px 0; }
+    .recommended h3 { color: #065F46; margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--color-silver-light); font-size: 14px; }
+    th { background: var(--color-violet-pale); font-weight: 600; color: var(--color-navy); }
+    .warning { background: #FEF3C7; border: 1px solid #FDE68A; border-radius: 8px; padding: 16px; margin: 16px 0; font-size: 14px; color: #92400E; }
+  </style>
+</head>
+<body>
+
+  <p class="badge">Internal Document</p>
+  <h1>Email Trigger &amp; Notification Setup Guide</h1>
+  <p class="subtitle">AI.MeD Website — Contact Form Email Configuration<br>For: GoDaddy Static Hosting | Zero Backend Required</p>
+
+  <div class="warning">
+    <strong>Note:</strong> This guide is for the internal team. Do not publish this page on the live website.
+  </div>
+
+  <!-- ============================================ -->
+  <h2>Option A — Formspree (Recommended)</h2>
+  <p><span class="badge">Recommended</span> Zero backend, works directly with GoDaddy static hosting.</p>
+
+  <div class="card card-highlight">
+    <h3>Setup Steps</h3>
+    <ol>
+      <li><span class="step-number">1</span> <strong>Create account:</strong> Go to <a href="https://formspree.io" target="_blank">formspree.io</a> and sign up for a free account.</li>
+      <li><span class="step-number">2</span> <strong>Create new form:</strong> Name it <code>AI.MeD Website Inquiries</code></li>
+      <li><span class="step-number">3</span> <strong>Copy form ID:</strong> You'll receive a unique form ID (e.g., <code>xyzabc12</code>)</li>
+      <li><span class="step-number">4</span> <strong>Update contact.html:</strong> Set the form action URL:
+        <pre>&lt;form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"&gt;</pre>
+      </li>
+      <li><span class="step-number">5</span> <strong>Configure in Formspree Dashboard:</strong>
+        <ul>
+          <li>Notification email: <code>hello@ai-med.co.in</code> (or your business email)</li>
+          <li>Reply-To: set to submitter's email field <code>{email}</code></li>
+          <li>Subject template: <code>AI.MeD Inquiry: {inquiry_type} from {name} at {organization}</code></li>
+          <li>Enable submission email notifications (every submission)</li>
+          <li>Enable auto-responder to submitter</li>
+          <li>Enable reCAPTCHA spam protection</li>
+        </ul>
+      </li>
+      <li><span class="step-number">6</span> <strong>Configure auto-responder message:</strong>
+        <pre>Thank you for reaching out to AI.MeD.
+
+We've received your inquiry regarding {inquiry_type}
+and will respond within 2 business days.
+
+In the meantime, explore our platforms at https://ai-med.co.in
+
+— The AI.MeD Team</pre>
+      </li>
+      <li><span class="step-number">7</span> <strong>Test:</strong> Submit a test inquiry → verify email received at your inbox</li>
+    </ol>
+    <div class="cost">
+      <strong>Cost:</strong> Free tier = 50 submissions/month | $10/month for 1,000 submissions/month
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <h2>Option B — Zapier Automation Layer</h2>
+  <p><span class="badge-teal badge">Add-On</span> Connect Formspree to Slack, Google Sheets, and CRM.</p>
+
+  <div class="card card-teal">
+    <h3>Setup Steps</h3>
+    <ol>
+      <li><span class="step-number">1</span> In Formspree: Go to Settings → Webhooks → Add your Zapier webhook URL</li>
+      <li><span class="step-number">2</span> Create the following Zaps in Zapier:</li>
+    </ol>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Zap</th>
+          <th>Trigger</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Zap 1</strong></td>
+          <td>New Formspree submission</td>
+          <td>Send email via Gmail/Outlook with all form fields</td>
+        </tr>
+        <tr>
+          <td><strong>Zap 2</strong></td>
+          <td>New submission</td>
+          <td>Post to Slack channel <code>#website-inquiries</code></td>
+        </tr>
+        <tr>
+          <td><strong>Zap 3</strong></td>
+          <td>New submission</td>
+          <td>Create row in Google Sheets (inquiry log with timestamp)</td>
+        </tr>
+        <tr>
+          <td><strong>Zap 4 (optional)</strong></td>
+          <td>If inquiry_type = "Investment"</td>
+          <td>Create contact in HubSpot CRM</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Slack Message Format</h3>
+    <pre>New AI.MeD Inquiry
+
+Name: {name} | Org: {organization}
+Type: {inquiry_type}
+Platforms: {platforms}
+Email: {email}
+Message: {message}</pre>
+  </div>
+
+  <!-- ============================================ -->
+  <h2>Option C — EmailJS (Alternative)</h2>
+  <p><span class="badge-gray badge">Alternative</span> Pure frontend email — no Formspree needed.</p>
+
+  <div class="card">
+    <h3>Setup Steps</h3>
+    <ol>
+      <li>Create account at <a href="https://emailjs.com" target="_blank">emailjs.com</a> (free: 200 emails/month)</li>
+      <li>Connect your Gmail or Outlook account as an email service</li>
+      <li>Create an email template with all form variables</li>
+      <li>Copy your Service ID, Template ID, and Public Key</li>
+      <li>Replace Formspree code in <code>form.js</code> with EmailJS SDK calls</li>
+    </ol>
+
+    <h3>EmailJS Implementation (replace Formspree fetch in form.js)</h3>
+    <pre>&lt;!-- Add to contact.html head --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+// Initialize EmailJS
+emailjs.init('YOUR_PUBLIC_KEY');
+
+// Replace the fetch() call in form.js with:
+emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+  name: formData.get('name'),
+  organization: formData.get('organization'),
+  email: formData.get('email'),
+  inquiry_type: formData.get('inquiry_type'),
+  message: formData.get('message'),
+  platforms: platforms.join(', '),
+  role: formData.get('role'),
+  phone: formData.get('phone'),
+  referral_source: formData.get('referral_source')
+})
+.then(function(response) {
+  // Show success state
+  formContainer.style.display = 'none';
+  formSuccess.classList.add('visible');
+})
+.catch(function(error) {
+  // Show error state
+  globalError.classList.add('visible');
+});
+&lt;/script&gt;</pre>
+
+    <div class="cost">
+      <strong>Cost:</strong> Free tier = 200 emails/month | $10/month for 1,000 emails/month
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <h2>Recommended Workflow for AI.MeD</h2>
+
+  <div class="recommended">
+    <h3>Production Setup</h3>
+    <ol>
+      <li><strong>Primary:</strong> Use <strong>Formspree</strong> for reliability + email notification to your business inbox</li>
+      <li><strong>Slack:</strong> Use <strong>Zapier</strong> to simultaneously post to a Slack channel <code>#website-inquiries</code></li>
+      <li><strong>Backup CRM:</strong> Store all submissions in <strong>Google Sheets</strong> via Zapier as a backup inquiry log</li>
+      <li><strong>Monthly review:</strong> Review all inquiries, follow up on non-responses, update pipeline tracking</li>
+    </ol>
+  </div>
+
+  <!-- ============================================ -->
+  <h2>Testing Checklist</h2>
+
+  <div class="card">
+    <ul>
+      <li>&#9744; Submit test inquiry from contact.html</li>
+      <li>&#9744; Verify notification email arrives at business inbox</li>
+      <li>&#9744; Verify auto-responder email arrives at submitter's inbox</li>
+      <li>&#9744; Verify email subject line includes inquiry type and name</li>
+      <li>&#9744; Verify Slack notification posts correctly (if Zapier connected)</li>
+      <li>&#9744; Verify Google Sheets row is created (if Zapier connected)</li>
+      <li>&#9744; Test form validation (empty fields, invalid email, short message)</li>
+      <li>&#9744; Test success state display after submission</li>
+      <li>&#9744; Test error state display (disconnect internet and submit)</li>
+      <li>&#9744; Test on mobile device</li>
+      <li>&#9744; Test reCAPTCHA spam protection</li>
+    </ul>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 1px solid #E5E7EB;">
+  <p style="font-size: 13px; color: #9CA3AF; text-align: center;">AI.MeD — Internal Setup Guide | Not for public distribution</p>
+
+</body>
+</html>

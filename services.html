@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Powered Research &amp; Compliance Services | AI.MeD</title>
+  <meta name="description" content="Platform-led, outcome-driven services powered by HelixOS™, Regulon™, AI Molecule Foundry™, and SynaptMed™.">
+  <meta name="keywords" content="AI services, life sciences services, multi-omics pipelines, compliance automation, pharmacy digitization, HPC management">
+  <meta name="author" content="AI.MeD">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI-Powered Research &amp; Compliance Services | AI.MeD">
+  <meta property="og:description" content="Platform-led, outcome-driven services powered by HelixOS™, Regulon™, AI Molecule Foundry™, and SynaptMed™.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo/Ai.MeD_2.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/logo/aimed-favicon.ico">
+
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+
+<!-- Skip to main content -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" aria-label="AI.MeD Home">
+      <img src="assets/logo/Ai.MeD_2.png" alt="AI.MeD Logo" width="36" height="36">
+      <span class="nav-logo-text">AI.MeD</span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+
+      <!-- Platforms dropdown -->
+      <div class="nav-dropdown">
+        <a href="platforms.html" class="nav-link nav-dropdown-toggle">
+          Platforms
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="platforms.html#helixos" class="nav-dropdown-item" role="menuitem">
+            <strong>HelixOS&trade;</strong>
+            <span>AI-Native Multi-Omics Platform</span>
+          </a>
+          <a href="platforms.html#regulon" class="nav-dropdown-item" role="menuitem">
+            <strong>Regulon&trade;</strong>
+            <span>AI Compliance Operating System</span>
+          </a>
+          <a href="platforms.html#molecule-foundry" class="nav-dropdown-item" role="menuitem">
+            <strong>AI Molecule Foundry&trade;</strong>
+            <span>Drug Discovery Platform</span>
+          </a>
+          <a href="platforms.html#synaptmed" class="nav-dropdown-item" role="menuitem">
+            <strong>SynaptMed&trade;</strong>
+            <span>Smart Pharmacy Operations</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services dropdown -->
+      <div class="nav-dropdown">
+        <a href="services.html" class="nav-link nav-dropdown-toggle">
+          Services
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="services.html#helixos-services" class="nav-dropdown-item" role="menuitem">
+            <strong>Research &amp; Omics Services</strong>
+            <span>Multi-omics pipeline engineering &amp; AI enablement</span>
+          </a>
+          <a href="services.html#regulon-services" class="nav-dropdown-item" role="menuitem">
+            <strong>Compliance &amp; Audit Readiness</strong>
+            <span>Continuous compliance monitoring &amp; automation</span>
+          </a>
+          <a href="services.html#infra-services" class="nav-dropdown-item" role="menuitem">
+            <strong>Infrastructure &amp; Research IT</strong>
+            <span>HPC, GPU optimization &amp; cloud-native IT</span>
+          </a>
+          <a href="services.html#synaptmed-services" class="nav-dropdown-item" role="menuitem">
+            <strong>Pharmacy Digital Transformation</strong>
+            <span>End-to-end pharmacy onboarding &amp; operations</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+
+    <!-- CTA -->
+    <a href="contact.html" class="btn btn-primary nav-cta">See a Live Demo</a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <div class="mobile-menu-links">
+    <a href="index.html" class="mobile-menu-link">Home</a>
+
+    <button class="mobile-accordion-btn" aria-expanded="false">
+      Platforms
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+    <div class="mobile-accordion-panel">
+      <a href="platforms.html#helixos">HelixOS&trade; &mdash; AI-Native Multi-Omics Platform</a>
+      <a href="platforms.html#regulon">Regulon&trade; &mdash; AI Compliance Operating System</a>
+      <a href="platforms.html#molecule-foundry">AI Molecule Foundry&trade; &mdash; Drug Discovery Platform</a>
+      <a href="platforms.html#synaptmed">SynaptMed&trade; &mdash; Smart Pharmacy Operations</a>
+    </div>
+
+    <button class="mobile-accordion-btn" aria-expanded="false">
+      Services
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+    <div class="mobile-accordion-panel">
+      <a href="services.html#helixos-services">Research &amp; Omics Services</a>
+      <a href="services.html#regulon-services">Compliance &amp; Audit Readiness</a>
+      <a href="services.html#infra-services">Infrastructure &amp; Research IT</a>
+      <a href="services.html#synaptmed-services">Pharmacy Digital Transformation</a>
+    </div>
+
+    <a href="about.html" class="mobile-menu-link">About</a>
+    <a href="contact.html" class="mobile-menu-link">Contact</a>
+  </div>
+  <div class="mobile-menu-cta">
+    <a href="contact.html" class="btn btn-primary btn-full btn-lg">See a Live Demo</a>
+  </div>
+</div>
+
+<!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+<main id="main">
+
+  <!-- ============================================================
+       SECTION: PAGE HERO
+       ============================================================ -->
+  <section class="page-hero" aria-label="Services Hero">
+    <div class="page-hero-wave"></div>
+    <div class="container">
+      <span class="badge-teal" style="margin-bottom: 20px;">Platform-Powered Services</span>
+      <h1>Platform-Led. Outcome-Driven.</h1>
+      <p>We don&rsquo;t sell services in isolation. Every engagement is powered by one or more of our platforms &mdash; HelixOS&trade;, Regulon&trade;, AI Molecule Foundry&trade;, and SynaptMed&trade;.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: TABBED SERVICES
+       ============================================================ -->
+  <section class="section-white section-padding" aria-label="Platform-Powered Services">
+    <div class="container">
+
+      <!-- Tabs Navigation -->
+      <div class="tabs-nav" role="tablist" aria-label="Service categories">
+        <button class="tab-btn active" data-tab="helixos-services" role="tab" aria-selected="true" aria-controls="helixos-services">HelixOS&trade;-Powered</button>
+        <button class="tab-btn" data-tab="regulon-services" role="tab" aria-selected="false" aria-controls="regulon-services">Regulon&trade;-Powered</button>
+        <button class="tab-btn" data-tab="infra-services" role="tab" aria-selected="false" aria-controls="infra-services">Infrastructure &amp; Research IT</button>
+        <button class="tab-btn" data-tab="synaptmed-services" role="tab" aria-selected="false" aria-controls="synaptmed-services">SynaptMed&trade;-Powered</button>
+      </div>
+
+      <!-- ==============================
+           TAB 1: HelixOS-Powered Services
+           ============================== -->
+      <div class="tab-panel active" id="helixos-services" role="tabpanel">
+        <div class="animate-on-scroll" style="margin-bottom: 48px;">
+          <h2>Omics, AI &amp; Research Enablement</h2>
+          <p class="text-muted" style="max-width: 640px; margin-top: 12px; font-size: 17px; line-height: 1.6;">Built for pharma, biotech, and research teams that need reproducibility and scale.</p>
+        </div>
+
+        <!-- Service 1 -->
+        <div class="service-track animate-on-scroll animate-delay-1" style="margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span class="badge">HelixOS Pipelines</span>
+            <h3 style="margin-bottom: 0;">Multi-Omics Pipeline Engineering</h3>
+          </div>
+          <p class="track-desc">WGS, WES, RNA-Seq, scRNA-Seq, epigenomics, proteomics &amp; metabolomics workflows &mdash; engineered for reproducibility, version control, and multi-environment execution.</p>
+          <span class="outcome-tag">&ldquo;Pipelines that survive beyond a single project.&rdquo;</span>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-track animate-on-scroll animate-delay-2" style="margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span class="badge">HelixOS Data Core</span>
+            <h3 style="margin-bottom: 0;">AI-Ready Data Engineering</h3>
+          </div>
+          <p class="track-desc">Omics data harmonization, feature engineering for ML, FAIR-aligned datasets with full lineage tracking &mdash; so your data is genuinely usable for AI/ML, not just stored.</p>
+          <span class="outcome-tag">&ldquo;Data that is genuinely usable for AI/ML.&rdquo;</span>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-track animate-on-scroll animate-delay-3" style="margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span class="badge">HelixOS Deploy</span>
+            <h3 style="margin-bottom: 0;">HPC &amp; Cloud Acceleration</h3>
+          </div>
+          <p class="track-desc">GPU acceleration, Slurm/Kubernetes/cloud HPC setups, hybrid on-prem + cloud execution &mdash; optimized for throughput and cost control across research workloads.</p>
+          <span class="outcome-tag">&ldquo;Faster science, controlled cost.&rdquo;</span>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-track animate-on-scroll animate-delay-4" style="margin-bottom: 0;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span class="badge">HelixOS AI Workbench</span>
+            <h3 style="margin-bottom: 0;">Discovery &rarr; Production Enablement</h3>
+          </div>
+          <p class="track-desc">Notebook-to-pipeline hardening, model training &amp; inference, MLOps for biological models &mdash; bridging the gap between research exploration and production-grade deployment.</p>
+          <span class="outcome-tag">&ldquo;Research that actually reaches production.&rdquo;</span>
+        </div>
+      </div>
+
+      <!-- ==============================
+           TAB 2: Regulon-Powered Services
+           ============================== -->
+      <div class="tab-panel" id="regulon-services" role="tabpanel">
+        <div class="animate-on-scroll" style="margin-bottom: 48px;">
+          <h2>Continuous Compliance &amp; Audit Readiness</h2>
+          <p class="text-muted" style="max-width: 640px; margin-top: 12px; font-size: 17px; line-height: 1.6;">Built for pharma, biotech, and healthcare enterprises operating in regulated environments.</p>
+        </div>
+
+        <!-- Service 1 -->
+        <div class="service-track animate-on-scroll animate-delay-1" style="margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span class="badge">Regulon Core</span>
+            <h3 style="margin-bottom: 0;">Compliance Platform Implementation</h3>
+          </div>
+          <p class="track-desc">GxP, SOC 2, ISO 27001, HIPAA, GDPR compliance framework deployment &mdash; structured, automated, and aligned to your organizational risk profile from day one.</p>
+          <span class="outcome-tag">&ldquo;A compliance foundation that actually works.&rdquo;</span>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-track animate-on-scroll animate-delay-2" style="margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span class="badge">Regulon Evidence</span>
+            <h3 style="margin-bottom: 0;">Evidence Automation &amp; Audit Trail</h3>
+          </div>
+          <p class="track-desc">Automated evidence collection, immutable audit trails, regulatory document management &mdash; ensuring your compliance evidence is always current, not scrambled before audits.</p>
+          <span class="outcome-tag">&ldquo;Evidence that&rsquo;s always current &mdash; not scrambled before audits.&rdquo;</span>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-track animate-on-scroll animate-delay-3" style="margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span class="badge">Regulon Control-as-Code</span>
+            <h3 style="margin-bottom: 0;">Control-as-Code Automation</h3>
+          </div>
+          <p class="track-desc">Declarative controls across cloud, data, and IAM environments &mdash; controls that enforce themselves through code, not through manual checklists and spreadsheets.</p>
+          <span class="outcome-tag">&ldquo;Controls that enforce themselves.&rdquo;</span>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-track animate-on-scroll animate-delay-4" style="margin-bottom: 0;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span class="badge">Regulon Readiness Score</span>
+            <h3 style="margin-bottom: 0;">Managed Readiness Monitoring</h3>
+          </div>
+          <p class="track-desc">Continuous posture monitoring, risk-weighted scoring, executive dashboards &mdash; transforming audits from high-stress events into predictable, routine operations.</p>
+          <span class="outcome-tag">&ldquo;Audits become predictable &mdash; and boring.&rdquo;</span>
+        </div>
+      </div>
+
+      <!-- ==============================
+           TAB 3: Infrastructure & Research IT Services
+           ============================== -->
+      <div class="tab-panel" id="infra-services" role="tabpanel">
+        <div class="animate-on-scroll" style="margin-bottom: 48px;">
+          <h2>Infrastructure &amp; Research IT Services</h2>
+          <p class="text-muted" style="max-width: 640px; margin-top: 12px; font-size: 17px; line-height: 1.6;">Strategic anchor services for enterprise entry and recurring revenue.</p>
+        </div>
+
+        <!-- Service 1 -->
+        <div class="service-track animate-on-scroll animate-delay-1" style="margin-bottom: 24px;">
+          <h3>HPC Lifecycle Management</h3>
+          <p class="track-desc">Full lifecycle management for high-performance computing clusters &mdash; from procurement and provisioning through optimization, monitoring, and end-of-life planning.</p>
+          <span class="outcome-tag">&ldquo;Infrastructure that keeps pace with research demands.&rdquo;</span>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-track animate-on-scroll animate-delay-2" style="margin-bottom: 24px;">
+          <h3>GPU Cluster Optimization</h3>
+          <p class="track-desc">GPU optimization for AI/ML workloads in research environments &mdash; scheduling, resource allocation, memory profiling, and utilization maximization across multi-tenant clusters.</p>
+          <span class="outcome-tag">&ldquo;Maximum compute, minimum waste.&rdquo;</span>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-track animate-on-scroll animate-delay-3" style="margin-bottom: 24px;">
+          <h3>DevOps &amp; MLOps in Regulated Environments</h3>
+          <p class="track-desc">CI/CD, MLOps pipelines, and infrastructure automation for regulated life sciences &mdash; shipping faster without breaking compliance or audit readiness.</p>
+          <span class="outcome-tag">&ldquo;Ship faster without breaking compliance.&rdquo;</span>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-track animate-on-scroll animate-delay-4" style="margin-bottom: 24px;">
+          <h3>Cloud-Native Research IT Modernization</h3>
+          <p class="track-desc">Migration and modernization of legacy research IT to cloud-native architectures &mdash; containerization, microservices decomposition, and progressive migration strategies.</p>
+          <span class="outcome-tag">&ldquo;Modern infrastructure, legacy-free.&rdquo;</span>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-track animate-on-scroll" style="margin-bottom: 0;">
+          <h3>Bioinformatics Custom Development</h3>
+          <p class="track-desc">Custom bioinformatics tools, pipeline development, and data analysis workflows &mdash; purpose-built for your research protocols, data types, and analytical requirements.</p>
+          <span class="outcome-tag">&ldquo;Tools built for your exact research needs.&rdquo;</span>
+        </div>
+      </div>
+
+      <!-- ==============================
+           TAB 4: SynaptMed-Powered Services
+           ============================== -->
+      <div class="tab-panel" id="synaptmed-services" role="tabpanel">
+        <div class="animate-on-scroll" style="margin-bottom: 48px;">
+          <h2>Smart Pharmacy Digital Transformation</h2>
+          <p class="text-muted" style="max-width: 640px; margin-top: 12px; font-size: 17px; line-height: 1.6;">End-to-end pharmacy digitization for single stores and chains.</p>
+        </div>
+
+        <!-- Service 1 -->
+        <div class="service-track animate-on-scroll animate-delay-1" style="margin-bottom: 24px;">
+          <h3>Pharmacy Onboarding &amp; Setup</h3>
+          <p class="track-desc">Complete digital onboarding, inventory migration, and staff training &mdash; a turnkey approach that gets pharmacies live on SynaptMed&trade; in days, not months.</p>
+          <span class="outcome-tag">&ldquo;Go live in days, not months.&rdquo;</span>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-track animate-on-scroll animate-delay-2" style="margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span class="badge" style="background: rgba(6,182,212,0.1); color: var(--color-teal-dark);">SynaptMed Inventory Intelligence</span>
+            <h3 style="margin-bottom: 0;">Inventory &amp; Expiry Optimization</h3>
+          </div>
+          <p class="track-desc">Demand forecasting, expiry alerts, automated reordering &mdash; intelligent inventory management that reduces expiry waste by up to 40%.</p>
+          <span class="outcome-tag">&ldquo;Reduce expiry waste by up to 40%.&rdquo;</span>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-track animate-on-scroll animate-delay-3" style="margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span class="badge" style="background: rgba(6,182,212,0.1); color: var(--color-teal-dark);">SynaptMed Fast POS</span>
+            <h3 style="margin-bottom: 0;">Billing &amp; POS Enablement</h3>
+          </div>
+          <p class="track-desc">Sub-3-second billing, voice/barcode search, GST-compliant, UPI integration &mdash; faster transactions that keep customers moving and revenue flowing.</p>
+          <span class="outcome-tag">&ldquo;Faster billing, happier customers.&rdquo;</span>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-track animate-on-scroll animate-delay-4" style="margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span class="badge" style="background: rgba(6,182,212,0.1); color: var(--color-teal-dark);">SynaptMed Growth Tools</span>
+            <h3 style="margin-bottom: 0;">Customer Growth &amp; Retention</h3>
+          </div>
+          <p class="track-desc">Prescription digitization, WhatsApp refill reminders, loyalty programs &mdash; turning one-time buyers into regulars through automated engagement and personalized outreach.</p>
+          <span class="outcome-tag">&ldquo;Turn one-time buyers into regulars.&rdquo;</span>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-track animate-on-scroll" style="margin-bottom: 0;">
+          <h3>Chain Management &amp; Analytics</h3>
+          <p class="track-desc">Multi-store dashboards, centralized procurement, performance benchmarking &mdash; running your pharmacy chain like a single intelligent system with full visibility and control.</p>
+          <span class="outcome-tag">&ldquo;Run your chain like a single intelligent system.&rdquo;</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: ENGAGEMENT MODEL
+       ============================================================ -->
+  <section class="section-light section-padding" aria-label="Engagement Model">
+    <div class="container">
+      <div class="engagement-model animate-on-scroll">
+        <h3 style="margin-bottom: 16px;">How We Work With You</h3>
+        <p class="text-muted" style="margin-bottom: 40px; font-size: 17px;">Platform-led. Outcome-driven. Every step designed to prove value early and scale cleanly.</p>
+
+        <div class="engagement-steps">
+          <div class="engagement-step">
+            <span class="engagement-step-number">1</span>
+            <span class="engagement-step-label">Discovery &amp; Fit</span>
+            <span class="text-muted text-small" style="max-width: 180px;">Platform selection: HelixOS / Regulon / AI Molecule Foundry / SynaptMed</span>
+          </div>
+          <span class="engagement-arrow">&rarr;</span>
+          <div class="engagement-step">
+            <span class="engagement-step-number">2</span>
+            <span class="engagement-step-label">PoC on Real Data</span>
+            <span class="text-muted text-small" style="max-width: 180px;">Pipelines, controls, or pharmacy workflows &mdash; live on your environment</span>
+          </div>
+          <span class="engagement-arrow">&rarr;</span>
+          <div class="engagement-step">
+            <span class="engagement-step-number">3</span>
+            <span class="engagement-step-label">Production Rollout</span>
+            <span class="text-muted text-small" style="max-width: 180px;">Hardened, secure, compliant deployment</span>
+          </div>
+          <span class="engagement-arrow">&rarr;</span>
+          <div class="engagement-step">
+            <span class="engagement-step-number">4</span>
+            <span class="engagement-step-label">Scale &amp; Optimize</span>
+            <span class="text-muted text-small" style="max-width: 180px;">Performance, cost, governance, and expansion</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 48px;">
+          <p style="font-size: 20px; font-weight: 600; color: var(--color-navy); margin-bottom: 20px;">Let&rsquo;s Build Something Real</p>
+          <a href="contact.html" class="btn btn-primary btn-lg">Contact Us &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Column 1 — Company -->
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom: 12px;">
+          <img src="assets/logo/Ai.MeD_1.png" alt="AI.MeD Logo" width="32" height="32">
+          <span class="nav-logo-text" style="color: var(--color-white);">AI.MeD</span>
+        </a>
+        <p>Transforming Healthcare Through Intelligent Platforms</p>
+        <p style="font-size: 13px; margin-top: 8px;">AI-Native Platforms for Life Sciences &amp; Healthcare</p>
+      </div>
+
+      <!-- Column 2 — Platforms -->
+      <div class="footer-col">
+        <h4>Platforms</h4>
+        <a href="platforms.html#helixos">HelixOS&trade;</a>
+        <a href="platforms.html#regulon">Regulon&trade;</a>
+        <a href="platforms.html#molecule-foundry">AI Molecule Foundry&trade;</a>
+        <a href="platforms.html#synaptmed">SynaptMed&trade;</a>
+      </div>
+
+      <!-- Column 3 — Services -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html#helixos-services">Omics &amp; Research Enablement</a>
+        <a href="services.html#regulon-services">Compliance &amp; Audit Readiness</a>
+        <a href="services.html#infra-services">Infrastructure &amp; Research IT</a>
+        <a href="services.html#synaptmed-services">Pharmacy Operations</a>
+      </div>
+
+      <!-- Column 4 — Connect -->
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">Careers</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="mailto:hello@ai-med.co.in">hello@ai-med.co.in</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 AI.MeD. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
+      <p>Transforming Healthcare &times; Life Sciences &times; AI</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script defer src="js/main.js"></script>
+
+</body>
+</html>
