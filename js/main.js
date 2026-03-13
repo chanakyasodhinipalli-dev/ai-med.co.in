@@ -150,18 +150,41 @@
     var container = tabsNav.parentElement;
     var panels = container.querySelectorAll('.tab-panel');
 
+    function activateTab(tabId) {
+      buttons.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+      panels.forEach(function (p) { p.classList.remove('active'); });
+
+      var targetBtn = tabsNav.querySelector('[data-tab="' + tabId + '"]');
+      var targetPanel = container.querySelector('#' + tabId);
+      if (targetBtn && targetPanel) {
+        targetBtn.classList.add('active');
+        targetBtn.setAttribute('aria-selected', 'true');
+        targetPanel.classList.add('active');
+        return true;
+      }
+      return false;
+    }
+
     buttons.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        var targetPanel = btn.getAttribute('data-tab');
-
-        buttons.forEach(function (b) { b.classList.remove('active'); });
-        panels.forEach(function (p) { p.classList.remove('active'); });
-
-        btn.classList.add('active');
-        var panel = container.querySelector('#' + targetPanel);
-        if (panel) panel.classList.add('active');
+        activateTab(btn.getAttribute('data-tab'));
       });
     });
+
+    // Activate tab from URL hash on page load
+    var hash = window.location.hash.replace('#', '');
+    if (hash) {
+      activateTab(hash);
+    }
+  });
+
+  // Handle hash changes (e.g. back/forward navigation)
+  window.addEventListener('hashchange', function () {
+    var hash = window.location.hash.replace('#', '');
+    if (hash) {
+      var tabBtn = document.querySelector('.tab-btn[data-tab="' + hash + '"]');
+      if (tabBtn) tabBtn.click();
+    }
   });
 
   /* ----------------------------------------------------------
